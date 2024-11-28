@@ -19,10 +19,10 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1
 
-    - name: Install SQL Server Data Tools
-      run: |
-        choco install sqlpackage -y
-        echo "SQLPackage installed"
+    # - name: Install SQL Server Data Tools
+    #   run: |
+    #     choco install sqlpackage -y
+    #     echo "SQLPackage installed"
     
     - name: Print file tree
       run: tree /F
