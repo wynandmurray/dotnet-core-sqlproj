@@ -29,5 +29,5 @@ jobs:
 
     - name: Build the SQL Project
       run: |
-        msbuild dotnet-core-sqlproj.sqlproj /p:Configuration=Release /p:OutputPath=./output
+        msbuild dotnet-core-sqlproj/dotnet-core-sqlproj.sqlproj /p:Configuration=Release /p:OutputPath=./output
         echo "DACPAC file created in ./output directory"
