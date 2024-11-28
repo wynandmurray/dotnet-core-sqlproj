@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Company]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [CompanyName] VARCHAR(50) NULL
+)
