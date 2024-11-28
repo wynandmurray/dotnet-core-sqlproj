@@ -23,6 +23,9 @@ jobs:
       run: |
         choco install sqlpackage -y
         echo "SQLPackage installed"
+    
+    - name: Print file tree
+      run: tree /F
 
     - name: Build the SQL Project
       run: |
