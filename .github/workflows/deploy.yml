@@ -31,3 +31,6 @@ jobs:
       run: |
         msbuild dotnet-core-sqlproj/dotnet-core-sqlproj.sqlproj /p:Configuration=Release /p:OutputPath=./output
         echo "DACPAC file created in ./output directory"
+
+    - name: Print file tree
+      run: tree /F
