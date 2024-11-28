@@ -17,17 +17,15 @@ jobs:
         dotnet-version: '7.0' # Adjust based on your project's target
 
     - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1
-
-    # - name: Install SQL Server Data Tools
-    #   run: |
-    #     choco install sqlpackage -y
-    #     echo "SQLPackage installed"
+      uses: microsoft/setup-msbuild@v1    
     
     - name: Print file tree
       run: tree /F
 
-    - name: Build the SQL Project
+    - name: Build the SQL Project - DOTNET BUILD
+      run: dotnet build dotnet-core-sqlproj/dotnet-core-sqlproj.sqlproj --configuration Release
+
+    - name: Build the SQL Project - MSBUILD
       run: |
         msbuild dotnet-core-sqlproj/dotnet-core-sqlproj.sqlproj /p:Configuration=Release /p:OutputPath=./output
         echo "DACPAC file created in ./output directory"
