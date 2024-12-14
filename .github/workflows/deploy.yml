@@ -22,8 +22,8 @@ jobs:
     - name: Print file tree
       run: tree /F
 
-    - name: Build the SQL Project - DOTNET BUILD
-      run: dotnet build dotnet-core-sqlproj/dotnet-core-sqlproj.sqlproj --configuration Release
+    # - name: Build the SQL Project - DOTNET BUILD
+    #   run: dotnet build dotnet-core-sqlproj/dotnet-core-sqlproj.sqlproj --configuration Release
 
     - name: Build the SQL Project - MSBUILD
       run: |
